@@ -48,10 +48,10 @@ func (p ProntoService) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    flag.Parse()
-    if *configFilename == "" {
-      log.Fatal("Must provide a configuration file")
-    }
+	flag.Parse()
+	if *configFilename == "" {
+		log.Fatal("Must provide a configuration file")
+	}
 	conf, _ := ConfigFromYaml(*configFilename)
 	creds := CredentialsFromConfig(conf)
 	pronto := New(creds, conf.Container)
