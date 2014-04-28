@@ -36,7 +36,7 @@ func New(creds *identity.Credentials, container string) *ProntoService {
 
 func (p ProntoService) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	trimmedPath := strings.TrimLeft(r.URL.Path, "/")
-	log.Printf("Request for '%#v'\n", trimmedPath)
+	log.Printf("Request for %#v\n", trimmedPath)
 	rc, err := p.s.GetReader(p.container, trimmedPath)
 	if err != nil {
 		log.Printf("%s", err)
