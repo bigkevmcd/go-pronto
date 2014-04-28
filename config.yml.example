@@ -1,0 +1,18 @@
+credentials:
+    # auth-url is the URL for the keystone authentication instance.
+    auth-url: https://keystone.example.com/v2.0/
+
+    # tenant-name holds the openstack tenant name
+    tenant-name: example_tenant
+
+    # region holds the openstack region.
+    region: example
+
+    # The username and password attributes are used for
+    # userpass authentication.
+    #
+    username: testing
+    password: password
+
+container: 1233f97438f0456788273d757ab49101
+port: :9080
