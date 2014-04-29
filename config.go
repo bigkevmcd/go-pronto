@@ -21,8 +21,8 @@ type config struct {
 	Port      string
 }
 
-// CredentialsFromEnv creates and initializes the credentials from the
-// environment variables.
+// ConfigFromYaml opens and reads the supplied Yaml file into a config
+// structure.
 func ConfigFromYaml(filename string) (*config, error) {
 	f, err := os.Open(filename)
 	if err != nil {
@@ -41,6 +41,8 @@ func ConfigFromYaml(filename string) (*config, error) {
 	return conf, nil
 }
 
+// CredentialsFromConfig takes a config and creates a goose Identity from the
+// supplied parameters.
 func CredentialsFromConfig(conf *config) *identity.Credentials {
 	return &identity.Credentials{
 		URL:        conf.Credentials.AuthUrl,
