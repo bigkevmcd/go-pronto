@@ -52,7 +52,10 @@ func main() {
 	if *configFilename == "" {
 		log.Fatal("Must provide a configuration file")
 	}
-	conf, _ := ConfigFromYaml(*configFilename)
+	conf, err := ConfigFromYaml(*configFilename)
+	if err != nil {
+		log.Fatalf("Error parsing config file %s", err)
+	}
 	creds := CredentialsFromConfig(conf)
 	pronto := New(creds, conf.Container)
 
