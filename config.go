@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"gopkg.in/v1/yaml"
-	"launchpad.net/goose/identity"
+	"github.com/bigkevmcd/goose/identity"
 )
 
 type config struct {
