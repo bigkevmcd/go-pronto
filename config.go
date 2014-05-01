@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"gopkg.in/v1/yaml"
 	"github.com/bigkevmcd/goose/identity"
+	"gopkg.in/v1/yaml"
 )
 
 type config struct {
