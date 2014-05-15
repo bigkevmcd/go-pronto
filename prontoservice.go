@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/bigkevmcd/goose/client"
-	"github.com/bigkevmcd/goose/identity"
-	"github.com/bigkevmcd/goose/swift"
+	"launchpad.net/goose/client"
+	"launchpad.net/goose/identity"
+	"launchpad.net/goose/swift"
 )
 
 type swiftReader interface {

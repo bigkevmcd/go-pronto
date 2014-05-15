@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/bigkevmcd/goose/identity"
+	"launchpad.net/goose/identity"
 	"gopkg.in/v1/yaml"
 )
 

@@ -95,5 +95,4 @@ func (s *ProntoServiceSuite) TestSwiftContentSentToBrowser(c *gc.C) {
 
 	c.Assert(w.Body.String(), gc.Equals, "This is a test")
 }
-
 // TODO: provide a log to ProntoService and test New()
